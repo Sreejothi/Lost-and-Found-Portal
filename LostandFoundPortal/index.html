@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Findora - Lost & Found Portal</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+<header>Findora - Lost & Found Portal</header>
+
+
+<div class="container" id="loginPage">
+<h3>Login</h3>
+<input type="text" placeholder="Enter Mobile Number" id="mobile" />
+<button onclick="goToCategory()">Login</button>
+</div>
+
+
+<div class="container" id="categoryPage" style="display:none;">
+<h3>Select Category</h3>
+<button onclick="goToForm('lost')">I Lost Something</button>
+<button onclick="goToForm('found')">I Found Something</button>
+</div>
+
+
+<div class="container" id="formPage" style="display:none;">
+<h3 id="formTitle"></h3>
+<input type="text" id="itemName" placeholder="Item Name" />
+<textarea id="description" placeholder="Description"></textarea>
+<div id="map"></div>
+<button onclick="submitForm()">Submit</button>
+</div>
+
+
+<script src="script.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>
